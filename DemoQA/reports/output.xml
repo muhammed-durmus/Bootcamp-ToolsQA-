@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211027 00:12:30.959" rpa="false" schemaversion="2">
+<suite id="s1" name="practiceFormTest" source="C:\Users\muham\PycharmProjects\DemoQA\test\practiceFormTest.robot">
+<test id="s1-t1" name="test 1">
+<kw name="form test" library="practiceFormApp">
+<kw name="create session" library="practiceForm">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211027 00:12:31.724" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20211027 00:12:31.724" endtime="20211027 00:12:32.926"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211027 00:12:32.926" endtime="20211027 00:12:33.059"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:31.724" endtime="20211027 00:12:33.059"/>
+</kw>
+<kw name="go to form page" library="practiceForm">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://demoqa.com/automation-practice-form</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211027 00:12:33.059" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20211027 00:12:33.059" endtime="20211027 00:12:35.095"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:33.059" endtime="20211027 00:12:35.096"/>
+</kw>
+<kw name="verify the form page" library="practiceForm">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>css=.main-header</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211027 00:12:35.096" endtime="20211027 00:12:35.109"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Practice Form</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211027 00:12:35.109" endtime="20211027 00:12:35.122"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Student Registration Form</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211027 00:12:35.122" endtime="20211027 00:12:35.135"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:35.096" endtime="20211027 00:12:35.135"/>
+</kw>
+<kw name="enter the inputs" library="practiceForm">
+<kw name="First Name" library="FakerLibrary">
+<var>${name}</var>
+<msg timestamp="20211027 00:12:35.136" level="INFO">${name} = Daniel</msg>
+<status status="PASS" starttime="20211027 00:12:35.135" endtime="20211027 00:12:35.136"/>
+</kw>
+<kw name="Last Name" library="FakerLibrary">
+<var>${surname}</var>
+<msg timestamp="20211027 00:12:35.136" level="INFO">${surname} = Martinez</msg>
+<status status="PASS" starttime="20211027 00:12:35.136" endtime="20211027 00:12:35.136"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${e-mail}</var>
+<msg timestamp="20211027 00:12:35.137" level="INFO">${e-mail} = lisa74@example.net</msg>
+<status status="PASS" starttime="20211027 00:12:35.137" endtime="20211027 00:12:35.137"/>
+</kw>
+<kw name="input" library="utils">
+<arg>id=firstName</arg>
+<arg>${name}</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20211027 00:12:35.138" endtime="20211027 00:12:35.181"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211027 00:12:35.182" level="INFO">Clicking element 'id=firstName'.</msg>
+<status status="PASS" starttime="20211027 00:12:35.182" endtime="20211027 00:12:35.229"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211027 00:12:35.229" level="INFO">Typing text 'Daniel' into text field 'id=firstName'.</msg>
+<status status="PASS" starttime="20211027 00:12:35.229" endtime="20211027 00:12:35.289"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:35.137" endtime="20211027 00:12:35.289"/>
+</kw>
+<kw name="input" library="utils">
+<arg>id=lastName</arg>
+<arg>${surname}</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20211027 00:12:35.290" endtime="20211027 00:12:35.350"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211027 00:12:35.351" level="INFO">Clicking element 'id=lastName'.</msg>
+<status status="PASS" starttime="20211027 00:12:35.351" endtime="20211027 00:12:35.392"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211027 00:12:35.393" level="INFO">Typing text 'Martinez' into text field 'id=lastName'.</msg>
+<status status="PASS" starttime="20211027 00:12:35.392" endtime="20211027 00:12:35.451"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:35.290" endtime="20211027 00:12:35.451"/>
+</kw>
+<kw name="input" library="utils">
+<arg>id=userEmail</arg>
+<arg>${e-mail}</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20211027 00:12:35.452" endtime="20211027 00:12:35.496"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211027 00:12:35.496" level="INFO">Clicking element 'id=userEmail'.</msg>
+<status status="PASS" starttime="20211027 00:12:35.496" endtime="20211027 00:12:35.535"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211027 00:12:35.536" level="INFO">Typing text 'lisa74@example.net' into text field 'id=userEmail'.</msg>
+<status status="PASS" starttime="20211027 00:12:35.535" endtime="20211027 00:12:35.605"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:35.451" endtime="20211027 00:12:35.605"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:35.135" endtime="20211027 00:12:35.605"/>
+</kw>
+<kw name="chose gender" library="practiceForm">
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>id=gender-radio-1</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20211027 00:12:35.606" level="INFO">Double clicking element 'id=gender-radio-1'.</msg>
+<status status="PASS" starttime="20211027 00:12:35.606" endtime="20211027 00:12:35.958"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:35.605" endtime="20211027 00:12:35.958"/>
+</kw>
+<kw name="enter phone number" library="practiceForm">
+<kw name="Phone Number" library="FakerLibrary">
+<var>${phoneNumber}</var>
+<msg timestamp="20211027 00:12:35.959" level="INFO">${phoneNumber} = (572)637-2232x08269</msg>
+<status status="PASS" starttime="20211027 00:12:35.958" endtime="20211027 00:12:35.959"/>
+</kw>
+<kw name="input" library="utils">
+<arg>css=input#userNumber</arg>
+<arg>${phoneNumber}</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20211027 00:12:35.959" endtime="20211027 00:12:36.009"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211027 00:12:36.010" level="INFO">Clicking element 'css=input#userNumber'.</msg>
+<status status="PASS" starttime="20211027 00:12:36.009" endtime="20211027 00:12:36.051"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211027 00:12:36.052" level="INFO">Typing text '(572)637-2232x08269' into text field 'css=input#userNumber'.</msg>
+<status status="PASS" starttime="20211027 00:12:36.051" endtime="20211027 00:12:36.119"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:35.959" endtime="20211027 00:12:36.119"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:35.958" endtime="20211027 00:12:36.119"/>
+</kw>
+<kw name="enter the address" library="practiceForm">
+<kw name="Address" library="FakerLibrary">
+<var>${address}</var>
+<doc>:example '791 Crist Parks, Sashabury, IL 86039-9874'</doc>
+<msg timestamp="20211027 00:12:36.122" level="INFO">${address} = 7389 Elizabeth Spring
+Lemouth, TN 86112</msg>
+<status status="PASS" starttime="20211027 00:12:36.120" endtime="20211027 00:12:36.122"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=textarea#currentAddress</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211027 00:12:36.122" level="INFO">Typing text '7389 Elizabeth Spring
+Lemouth, TN 86112' into text field 'css=textarea#currentAddress'.</msg>
+<status status="PASS" starttime="20211027 00:12:36.122" endtime="20211027 00:12:36.247"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:36.120" endtime="20211027 00:12:36.247"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:31.724" endtime="20211027 00:12:36.248"/>
+</kw>
+<status status="PASS" starttime="20211027 00:12:31.724" endtime="20211027 00:12:36.248"/>
+</test>
+<status status="PASS" starttime="20211027 00:12:30.959" endtime="20211027 00:12:36.250"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="practiceFormTest">practiceFormTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
